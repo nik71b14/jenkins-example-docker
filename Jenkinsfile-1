@@ -1,7 +1,9 @@
 pipeline {
   agent {
-    label 'linux'
-    docker { image 'node:16-alpine' }
+    docker { 
+      image 'node:16-alpine'
+      label 'linux'
+    }
   }
   stages {
     stage('Test') {
